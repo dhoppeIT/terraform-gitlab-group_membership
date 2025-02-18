@@ -32,8 +32,8 @@ module "gitlab_group_membership" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-group-membership/local"
   version = "1.0.0"
 
-  group_id     = module.gitlab_group.group_id
-  user_id      = module.gitlab_user.user_id
+  group_id     = module.gitlab_group.id
+  user_id      = module.gitlab_user.id
   access_level = "owner"
 }
 ```
